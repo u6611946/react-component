@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello React</title>
+
+  <!-- React CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #9a4444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgb(189, 102, 176);
+      padding: 40px;
+      border-radius: 12px;
+      width: 400px;
+    }
+
+    h1 {
+      font-family: serif;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .username {
+      font-family: serif;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    function Greetings() {
+      return <h1>Hello, React!</h1>;
+    }
+
+    function User({ name }) {
+      return <p className="username">{name}</p>;
+    }
+
+    function App() {
+      return (
+        <div className="container">
+          <Greetings />
+          <User name="ATHIPHAT HIRUNADISUAN" />
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>
